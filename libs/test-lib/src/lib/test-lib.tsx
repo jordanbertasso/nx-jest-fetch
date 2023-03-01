@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import styled from 'styled-components';
 
 /* eslint-disable-next-line */
@@ -8,6 +9,11 @@ const StyledTestLib = styled.div`
 `;
 
 export function TestLib(props: TestLibProps) {
+  useEffect(() => {
+    fetch('https://github.com')
+  }, [])
+  
+
   return (
     <StyledTestLib>
       <h1>Welcome to TestLib!</h1>
